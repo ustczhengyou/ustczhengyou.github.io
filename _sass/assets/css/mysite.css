@@ -1,0 +1,275 @@
+/* Global */
+
+body {
+    font-family: Verdana,Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif;
+}
+
+code, 
+.highlighter-rouge,
+.highlighter-rouge .highlight {
+    background-color: #fdfdfd;
+}
+
+pre {
+    border-radius: 10px;
+}
+
+code {
+    font-family: Consolas,Verdana,Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,Microsoft Yahei,sans-serif;
+    border-radius: 5px;
+}
+
+code.highlighter-rouge {
+    color: #d14;
+}
+
+/* Site Header*/
+
+.site-header {
+    background-color: black;
+}
+
+.site-nav {
+    z-index: 100; /* 在移动端防止被tags页面中标签对应文章数覆盖掉菜单 */
+}
+
+.site-title,
+.site-title:visited {
+    color: white;
+}
+
+.trigger .page-link {
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .trigger .page-link {
+        color: black;
+    }
+
+}
+
+/* For Post Page */
+
+.post-header {
+    margin-bottom: 15px;
+}
+
+.post-meta {
+    margin-bottom: 2px;
+}
+
+.post-list h2 {
+    margin-bottom: 5px;
+}
+
+/* post-tag section start, for Home and Post page */
+
+.post-tag {
+    margin-bottom: 1em;
+}
+
+.post-tag ul {
+    margin: 0 0 40px;
+    padding: 0;
+}
+
+.post-tag li {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 300;
+    display: inline;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+.post-tag li:before {
+    content: "";
+}
+
+.post-tag a {
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+    text-decoration: none;
+}
+
+.post-tag .tag,
+.post-tag .count {
+    display: inline-block;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: consolas;
+    color: white;
+}
+
+.post-tag .tag {
+    padding: 2px 10px;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 10px;
+    z-index: -100;
+}
+
+.post-tag .tag-with-counter {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.post-tag .count {
+    padding: 2px 5px;
+    background-color: gray;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 0;
+}
+
+/* post-tag section */
+
+#post-content ul {
+    margin-left: 16px;
+}
+
+#post-content ol {
+    margin-left: 22px;
+}
+
+#post-content a {
+    color: black;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted black;
+}
+
+#post-content a:active,
+#post-content a:hover {
+    text-underline-position: none;
+    border-bottom: 1px solid black;
+}
+
+/* For Post Page, To Add *.*.* Before H1~H6 */
+
+.post h2, 
+.post h3, 
+.post h4 {
+    margin: 30px 0;
+}
+
+.post p {
+    margin: 20px 0;
+}
+
+/*
+#post-content h2:before {
+    content: counter(htwocounter) '. ';
+}
+
+#post-content h2 {
+    counter-increment: htwocounter;
+    counter-reset: hthreecounter;
+}
+
+#post-content h3:before {
+    content: counter(htwocounter) '.' counter(hthreecounter) '. ';
+}
+
+#post-content h3 {
+    counter-increment: hthreecounter;
+    counter-reset: hfourcounter;
+}
+
+#post-content h4:before {
+    content: counter(htwocounter) '.' counter(hthreecounter) '.' counter(hfourcounter) '. ';
+}
+
+#post-content h4 {
+    counter-increment: hfourcounter;
+}
+*/
+
+/* For Post Page ROC */
+
+/*
+
+#post-roc {
+    margin: 15px 0;
+    padding: 0;
+    font-family: Consolas;
+}
+
+#post-roc p {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 10px 0 0;
+    text-decoration: none;
+    color: #c7254e;
+    background-color: #eef;
+    border-radius: 5px;
+}
+
+#triangle {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-left: 5px solid black;
+    border-bottom: 5px solid transparent;
+}
+
+#list ul {
+    margin: 5px 0 0;
+    padding: 0;
+    list-style: none;
+    background-color: #eef;
+    border-radius: 10px;
+}
+
+#list a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #c7254e;
+}
+
+#list a:hover {
+    text-decoration: underline;
+}
+
+#list a.H3 {
+    padding-left: 20px;
+}
+
+#list a.H4 {
+    padding-left: 40px;
+}
+
+*/
+
+.tag-title {
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 10px 0 0;
+}
+
+.tag-post {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.tag-post a {
+    color: black;
+    text-decoration: underline;
+}
+
+.tag-post:hover {
+    color: black;
+    text-decoration: none;
+    background-color: #f1f3f5;
+    border-color: transparent;
+}
+
+:target {
+    color: gray;
+};

@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+    <div class="post-tag">
+      <ul>
+        {% for tag in page.tags %}
+        <li>
+          <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
+            <span class="tag">{{ tag }}</span>
+          </a>
+        </li>
+        {% unless forloop.last %}{% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+  </header>
+
+  <!--
+  <div id="post-roc">
+    <p>文章目录</p><div id="triangle"></div>
+    <div id="list"></div>
+  </div>
+  -->
+
+  <div id="post-content" class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% if site.disqus.shortname %}
+    {% include disqus_comments.html %}
+  {% endif %}
+</article>
