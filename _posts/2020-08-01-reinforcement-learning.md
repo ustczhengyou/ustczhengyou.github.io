@@ -714,7 +714,7 @@ Actor-Critic算法架构如下图所示：
 
 <div  align="center"> <img src="/assets/images/rl/ac_architecture.jpg" width="50%" height="50%" alt="REINFORCE算法"/> </div>
 
-<center>图 5.8 Actor-Critic算法框架图; 图片来源[1]</center>
+<center>图 5.7 Actor-Critic算法框架图; 图片来源[1]</center>
 
 #### A3C (Asynchronous Advantage Actor-Critic)
 
@@ -722,13 +722,13 @@ A3C算法为了提升训练速度采用了异步训练的思想，即利用多�
 
 <div  align="center"> <img src="/assets/images/rl/a3c_architecture.jpg" width="75%" height="75%" alt="REINFORCE算法"/> </div>
 
-<center>图 5.9 A3C算法框架图; 图片来源[17]</center>
+<center>图 5.8 A3C算法框架图; 图片来源[17]</center>
 
 A3C的异步训练方式的不仅增加了采样速度，加快训练和收敛速度，同时相比于DQN采用Replay Buffer存储样本的随机抽样训练方式来弱化样本之间的correlation，A3C通过多个thread独立地和环境交互采样训练同步梯度的方式达到了同样的效果，并更节约存储空间。A3C具体算法如下所示：
 
 <div  align="center"> <img src="/assets/images/rl/a3c_algorithms.jpg" width="70%" height="70%" alt="REINFORCE算法"/> </div>
 
-<center>图 5.10 A3C算法伪码; 图片来源[17]</center>
+<center>图 5.9 A3C算法伪码; 图片来源[17]</center>
 
 
 
@@ -738,7 +738,7 @@ A2C和A3C区别在于去掉了Asynchronous，即local agent之间和global netwo
 
 <div  align="center"> <img src="/assets/images/rl/a3c_vs_a2c.jpg" width="75%" height="75%" alt="REINFORCE算法"/> </div>
 
-<center>图 5.11 A3C和A2C结构对比图; 图片来源[4]</center>
+<center>图 5.10 A3C和A2C结构对比图; 图片来源[4]</center>
 
 事实证明，A2C可以更有效地利用GPU，并且在大批量处理时可以更好地工作，同时实现与A3C相同或更好的性能。
 
@@ -790,7 +790,7 @@ $f$ 函数输出平方值和方差，然后$\xi$ 是noise，从$N(\mu;\sigma)$�
 
 <div  align="center"> <img src="/assets/images/rl/sac.jpg" width="60%" height="60%" alt="SAC算法"/> </div>
 
-<center>图 4.12 SAC算法伪码; 图片来源[21]</center>
+<center>图 5.11 SAC算法伪码; 图片来源[21]</center>
 
 
 
@@ -806,7 +806,7 @@ DPG采用的是Actor-Critic框架形式，如下图所示：
 
 <div  align="center"> <img src="/assets/images/rl/dpg_ac.jpg" width="45%" height="45%" alt="REINFORCE算法"/> </div>
 
-<center>图 5.13 DPG算法结构流程图 </center>
+<center>图 5.12 DPG算法结构流程图 </center>
 
 和一般的Actor-Critic算法不同在于：Actor的输出会作为Critic部分的输入，存在嵌套关系。
 
@@ -838,7 +838,7 @@ DDPG是通过将DPG中的Actor和Critic函数通过Neural Network近似发展而
 
 <div  align="center"> <img src="/assets/images/rl/ddpg.jpg" width="80%" height="80%" alt="REINFORCE算法"/> </div>
 
-<center>图 5.14 DDPG算法伪码; 图片来源[14]</center>
+<center>图 5.13 DDPG算法伪码; 图片来源[14]</center>
 
 
 
@@ -862,7 +862,7 @@ $$
 
 <div  align="center"> <img src="/assets/images/rl/TD3.jpg" width="60%" height="60%" alt="REINFORCE算法"/> </div>
 
-<center>图 5.15 TD3算法伪码; 图片来源[15]</center>
+<center>图 5.14 TD3算法伪码; 图片来源[15]</center>
 
 
 
@@ -995,7 +995,7 @@ $$
 
 <img src="/assets/images/rl/ppo.jpg" alt="55C98BB2-0A4E-4EA9-B2D4-18CA24F352C6" style="zoom:50%;" />
 
-<center>图 5.7 PPO算法伪码; 图片来源[12]</center>
+<center>图 5.15 PPO算法伪码; 图片来源[12]</center>
 
 
 
